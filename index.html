@@ -4,14 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TailwindCSS | One little piggy</title>
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style text="text/tailwindcss">
-      /* Write your TailwindCSS specific code here (e.g., @theme, @layer base, @layer components) */
+
+    <style type="text/tailwindcss">
+      @theme {
+        --color-pig-white: #ffffff;
+        --color-pig-light: #f9beca;
+        --color-pig-black: #000000;
+        --color-pig-dark: #f46e86;
+      }
     </style>
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body>
-    <!-- Write your HTML code and TailwindCSS utilities here -->
-    <h1 class="text-ce">test</h1>
+  <body class="bg-[#ffffff] flex justify-center items-center h-screen m-0">
+    <div class="piggy-container relative w-[400px] h-[400px]">
+      <div
+        class="ear left absolute top-10 left-[45px] w-20 h-20 bg-pig-light border-8 border-pig-black rounded-full z-0"
+      ></div>
+
+      <div
+        class="ear right absolute top-10 right-[45px] w-20 h-20 bg-pig-light border-8 border-pig-black rounded-full z-0"
+      ></div>
+
+      <div
+        class="face absolute bottom-2.5 left-5 w-[360px] h-[360px] bg-pig-light border-8 border-pig-black rounded-full z-10"
+      >
+        <div
+          class="eye eye-left absolute top-[60px] left-[45px] w-[65px] h-[65px] bg-pig-white border-[5px] border-pig-black rounded-full z-30 flex items-center justify-center"
+        >
+          <div class="w-[25px] h-[25px] bg-pig-black rounded-full"></div>
+        </div>
+
+        <div
+          class="eye eye-right absolute top-[60px] right-[45px] w-[65px] h-[65px] bg-pig-white border-[5px] border-pig-black rounded-full z-30 flex items-center justify-center"
+        >
+          <div class="w-[25px] h-[25px] bg-pig-black rounded-full"></div>
+        </div>
+        <div
+          class="nose absolute top-[145px] left-1/2 -translate-x-1/2 w-[120px] h-[65px] bg-pig-dark border-[7px] border-pig-black rounded-[35px] z-40"
+        >
+          <div
+            class="nostril nostril-left absolute top-[15px] left-[25px] w-5 h-[25px] bg-pig-black rounded-full"
+          ></div>
+          <div
+            class="nostril nostril-right absolute top-[15px] right-[25px] w-5 h-[25px] bg-pig-black rounded-full"
+          ></div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
